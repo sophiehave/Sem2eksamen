@@ -1,0 +1,278 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background-image: url(img/cook_and_bake_mini_logo_graa.png);
+    background-size: 300px;
+
+}
+
+.container{
+    display: grid;
+    gap: 15px;
+    grid-template-areas: 
+    "some . sprog"
+    "logo logo logo"
+    " nav nav nav"
+    " indhold indhold indhold"
+    ;
+    max-width: 1200px;
+    margin-left: auto ;
+    margin-right: auto;
+}
+/* Sociale medier */
+.some{
+    grid-area: some;
+    padding-top: 10px;
+}
+.some img{
+    width: 35px;
+}
+
+/* Sprog */
+.sprog{
+    grid-area: sprog;
+    justify-content: right;
+    padding-top: 10px;
+}
+.sprog img{
+    width: 30px;
+    height: 20px;
+}
+.sprog a{
+    text-decoration: none;
+}
+
+/* Logo */
+.logo {
+    grid-area: logo;
+    margin-left: auto ;
+    margin-right: auto;
+}
+.logo img{
+    width: 120px;
+}
+
+/* Nav-bar */
+.nav{
+    grid-area: nav;
+    background-color: #9D061A;
+    overflow: auto;
+    
+}
+.nav a{
+    float: left;
+    text-decoration: none;
+    font-size: 20px;
+    color: white;
+    width: 16.66%;
+    text-align: center;
+}
+
+.nav a:hover{
+    color:grey
+}
+
+/* Indhold */
+.indhold{
+    grid-area: indhold;
+    background-color: white;
+}
+.titel{
+    text-align: center;
+}
+.info{
+    margin: 40px;
+}
+
+/* Forside */
+.kommersnart{
+    text-align: center;
+}
+.kommersnart img{
+    width: 900px;
+}
+
+/* Opskrifter */
+.endeneller{
+    margin-top: 40px;
+    display: flex;
+}
+.endeneller a{
+    text-decoration: none;
+    color: black;
+}
+.madlavning{
+    text-align: center;
+}
+.madlavning img{
+    width: 500px;
+    margin: 15px;
+}
+.madlavning img:hover{
+    filter: grayscale(100%);
+}
+.madlavning h3{
+    text-align: left;
+}
+.madlavning a{
+    text-decoration: none;
+    color: black;
+}
+.bagning{
+    text-align: center;
+}
+.bagning img{
+    width: 500px;
+    margin: 15px;
+}
+.bagning img:hover{
+    filter: grayscale(100%);
+}
+.bagning h3{
+    text-align: left;
+}
+.bagning a{
+    text-decoration: none;
+    color: black;
+}
+.pil{
+    font-size: 28px;
+    text-decoration: none;
+    color: #8A0517;
+}
+.pil:hover{
+    color: #dcdcdc;
+}
+.ingredienser{
+    padding: 30px;
+    width: 400px;
+    background-color: #dcdcdc;
+}
+.opskrift{
+    display: flex;
+}
+.howto{
+    padding: 0 40px;
+}
+.mad {
+    width: 1000px;
+}
+
+
+/* Om */
+.opdel{
+    display: flex;
+}
+.opdel img{
+    width: 300px;
+    margin-top: 80px;
+    margin-right: 80px;
+    margin-bottom: 30px;
+}
+
+/* Kontakt */
+.kontakt{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.kontakt label{
+    font-size: 18px;
+}
+.knap{
+    margin: 20px 0;
+    width: 100px;
+}
+
+
+/* Generel */
+h3 a{
+    text-decoration: none;
+    color: black;;
+}
+h3 a:hover{
+    color: grey;
+}
+
+
+
+
+
+
+/* Tablet layout */
+@media screen and (max-width: 860px) {
+    .container{
+    grid-template-areas:
+    "some . sprog"
+    "logo logo logo"
+    "nav nav nav"
+    "indhold indhold indhold"
+    ;
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+        margin-left: auto ;
+        margin-right: auto;
+    }
+    .sprog{
+        display: flex;
+        justify-content: end;
+    }
+    .nav{
+        display: flex;
+        justify-content: center;
+       
+    }
+    .nav a{
+        display: block;
+        float: none;
+        text-align: center;
+
+    }
+    .endeneller{
+        display: block;
+    }
+    .mad{
+        width: 500px;
+    }
+    .kommersnart img{
+        width: 500px;
+    }
+}
+
+/* Mobil layout */
+@media screen and (max-width: 550px) {
+  .container{
+    grid-template-areas: 
+    "some sprog"
+    "logo logo"
+    "nav nav"
+    "indhold indhold"
+    ;
+
+    }
+    .logo{
+        display: flex;
+        justify-content: center;
+    }
+
+    .sprog{
+        display: flex;
+        justify-content: end;
+    }
+    .opdel{
+        display: block;
+    }
+    .opdel img{
+        margin: 40px;
+    }
+    .opskrift{
+        display: block;
+    }
+} 
